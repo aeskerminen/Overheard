@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build: overheard-frontend
+    image: overheard-frontend
+    restart: "no"
+    volumes:
+      - ./overheard-frontend/:/frontend
+      - /frontend/node_modules
+    ports:
+      - 8080:8080
+
+  backend:
+    build: overheard-backend
+    image: overheard-backend
+    restart: "no"
+    volumes:
+      - ./overheard-backend/:/backend
+      - /backend/node_modules
+    ports:
+      - 3003:3003
