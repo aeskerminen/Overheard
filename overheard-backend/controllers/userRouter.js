@@ -52,7 +52,7 @@ userRouter.post("/login", async (req, res) => {
     var token = jwt.sign(payload, process.env.SECRET, { expiresIn: "24h" });
 
     return res
-      .cookie("token", token, { httpOnly: true, sameSite: "strict" })
+      .cookie("token", token, { httpOnly: true, sameSite: "Lax" })
       .status(200)
       .json({ message: "Logged in succesfully...", id: payload.id });
   } else {
