@@ -18,8 +18,8 @@ mongoose.connect(config.URL);
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://localhost:5173", "http://localhost:5173"],  // Allow both HTTP & HTTPS for local dev
-    credentials: true  // Required for cookies/auth
+    origin: ["https://localhost:5173", "http://localhost:5173"],
+    credentials: true  
 }));
 
 app.use(cookieParser());

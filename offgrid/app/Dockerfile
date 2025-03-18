@@ -1,6 +1,6 @@
-FROM node:12.18.1
+FROM node:latest
 
-expose 8000
+EXPOSE 1234
 
 WORKDIR /app
 

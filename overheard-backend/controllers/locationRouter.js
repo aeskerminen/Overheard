@@ -6,7 +6,7 @@ locationRouter.post("/:lat/:lon", async (req, res) => {
   const lon = req.params.lon;
 
   axios
-    .get(`http://localhost:8000/api/data/${lat}/${lon}`)
+    .get(`http://offgrid:1234/api/data/${lat}/${lon}`)
     .then((result) => {
       return res.json(result.data.data);
     })

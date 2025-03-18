@@ -25,7 +25,7 @@ const insertData = async (data) => {
   try {
     await query;
   } catch (err) {
-    console.error("Error inserting to database.");
+    console.error("Error inserting to database.", err);
   }
 };
 

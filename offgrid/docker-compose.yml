@@ -1,11 +1,14 @@
 services:
-  app:
-    build: app
+  offgrid:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
     image: app
     expose:
       - 1234
     volumes:
       - ./app/:/app
+      - /app/node_modules
     depends_on:
       - db
       - flyway
@@ -18,6 +21,8 @@ services:
     restart: "no"
     env_file:
       - project.env
+    expose:
+      - 5432  
 
   flyway:
     image: flyway/flyway:latest-alpine
