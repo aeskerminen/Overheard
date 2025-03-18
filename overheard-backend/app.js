@@ -17,7 +17,10 @@ mongoose.set("strictQuery", false);
 mongoose.connect(config.URL);
 
 app.use(express.json());
-app.use(cors({ origin: "http://172.18.0.4:5173", credentials: true }));
+app.use(cors({
+    origin: ["https://localhost:5173", "http://localhost:5173"],  // Allow both HTTP & HTTPS for local dev
+    credentials: true  // Required for cookies/auth
+}));
 
 app.use(cookieParser());
 
