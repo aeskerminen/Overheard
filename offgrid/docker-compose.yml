@@ -1,0 +1,30 @@
+services:
+  app:
+    build: app
+    image: app
+    expose:
+      - 1234
+    volumes:
+      - ./app/:/app
+    depends_on:
+      - db
+      - flyway
+    env_file:
+      - project.env
+
+  db:
+    container_name: db-server
+    image: postgres:latest
+    restart: "no"
+    env_file:
+      - project.env
+
+  flyway:
+    image: flyway/flyway:latest-alpine
+    depends_on:
+      - db
+    volumes:
+      - .:/flyway/sql
+    command: -connectRetries=30 -baselineOnMigrate=true migrate
+    env_file:
+      - project.env
