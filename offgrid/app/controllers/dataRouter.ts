@@ -1,7 +1,10 @@
 const dataRouter = require("express").Router();
-import sql from "../database";
+import sql from "../controllers/database";
 
-dataRouter.get("/:id", async (req : Express.Request, res : Express.Response) => {
+import { Request, Response } from "express";
+
+
+dataRouter.get("/:id", async (req : Request, res : Response) => {
   const id = req.params.id;
   const result = await sql`SELECT * FROM geonames WHERE geonameid = ${id}`;
 
@@ -10,7 +13,7 @@ dataRouter.get("/:id", async (req : Express.Request, res : Express.Response) => 
   });
 });
 
-dataRouter.get("/:lat/:lon", async (req, res) => {
+dataRouter.get("/:lat/:lon", async (req : Request, res : Response) => {
   const lat = req.params.lat;
   const lon = req.params.lon;
 
