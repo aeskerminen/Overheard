@@ -54,6 +54,7 @@
 
 3. Run the 'generate_certs' script
 
+    - chmod +x generate_certs.sh
     - ./generate_certs.sh
 
 4. Change the premade project.env file (optional)
