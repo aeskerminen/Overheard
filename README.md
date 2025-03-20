@@ -32,16 +32,16 @@
 
 1. Clone the repo
 
-git clone https://github.com/aeskerminen/Overheard.git
+- git clone https://github.com/aeskerminen/Overheard.git
 
 2. Go to the root of the repo
 
 3. Run the 'generate_certs' script
 
-./generate_certs.sh
+- ./generate_certs.sh
 
 4. Change the premade project.env file (optional)
 
 5. Run docker in the root directory
 
-sudo docker compose up --build
+- sudo docker compose up --build
