@@ -1,7 +1,7 @@
 const dataRouter = require("express").Router();
-const sql = require("../database");
+import sql from "../database";
 
-dataRouter.get("/:id", async (req, res) => {
+dataRouter.get("/:id", async (req : Express.Request, res : Express.Response) => {
   const id = req.params.id;
   const result = await sql`SELECT * FROM geonames WHERE geonameid = ${id}`;
 
@@ -38,4 +38,4 @@ dataRouter.get("/:lat/:lon", async (req, res) => {
   return res.json({ data: result[0] });
 });
 
-module.exports = dataRouter;
+export default dataRouter;

@@ -1,7 +1,8 @@
-const express = require("express");
-const cors = require("cors");
+import express from "express";
+import cors from "cors";
 
-const dataRouter = require("./controllers/dataRouter");
+import dataRouter from "./controllers/dataRouter";
+
 const app = express();
 
 app.use(express.json());
