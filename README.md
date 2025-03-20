@@ -24,9 +24,18 @@
 
 ## Techstack
 
+### Frontend
+
 - React.js
-- Epxress.js
 - Redux Toolkit
+
+### Backend
+
+- Epxress.js
+
+### Offgrid
+
+### General
 
 ## Usage
 
