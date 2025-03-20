@@ -1,4 +1,4 @@
-const app = require("./app");
+import app from "./app";
 import initializeDatabase from "./initialize";
 
 const runApp = async () => {

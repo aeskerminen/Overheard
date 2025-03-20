@@ -10,4 +10,4 @@ app.use(cors({ origin: "*" }));
 
 app.use("/api/data", dataRouter);
 
-module.exports = app;
+export default app;
