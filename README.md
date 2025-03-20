@@ -32,10 +32,17 @@
 ### Backend
 
 - Epxress.js
+- Axios
+- Mongoose
 
 ### Offgrid
 
+- Postgres
+- Express.js
+
 ### General
+
+- Nginx
 
 ## Usage
 
