@@ -1,5 +1,5 @@
 const dataRouter = require("express").Router();
-import sql from "../controllers/database";
+import sql from "../database";
 
 import { Request, Response } from "express";
 

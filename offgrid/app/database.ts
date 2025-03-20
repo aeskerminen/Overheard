@@ -1,3 +1,3 @@
-const postgres = require("postgres");
+import postgres from "postgres";
 
-module.exports = postgres({});
+export default postgres({});
