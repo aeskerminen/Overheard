@@ -1,5 +1,5 @@
 const app = require("./app");
-const initializeDatabase = require("./initialize");
+import initializeDatabase from "./initialize";
 
 const runApp = async () => {
   setTimeout(async () => {

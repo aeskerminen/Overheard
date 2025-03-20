@@ -1,15 +1,24 @@
-const fs = require("fs");
-const csv = require("csv-parser");
-const util = require("util");
-const stream = require("stream");
+import fs from "fs";
+import csv from "csv-parser";
+import util from "util";
+import stream from "stream";
 
 const pipeline = util.promisify(stream.pipeline);
 
-const sql = require("./database");
+import sql from "./database";
+
+interface dataParams {
+  geonameid: string,
+  name: string,
+  latitude: string,
+  longitude: string,
+  cc: string,
+  timezone: string
+};
 
 const dataLocation = "./data/cities15000.csv";
 
-const insertData = async (data) => {
+const insertData = async (data : dataParams) => {
   const query = sql`
     INSERT INTO geonames (geonameid, name, latitude, longitude, cc, timezone)
     VALUES (
@@ -43,4 +52,4 @@ const initializeDatabase = async () => {
     });
 };
 
-module.exports = initializeDatabase;
+export default initializeDatabase;
