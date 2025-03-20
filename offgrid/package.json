@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "typescript": "^5.8.2"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.1"
-  }
-}

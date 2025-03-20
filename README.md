@@ -1,8 +1,14 @@
 # Overheard
 
-## Overheard is my vision of a local anonymous social platform (like Jodel...)
+## Overheard is a copy of the notorious hyperlocal social media app Jodel.
 
-## Features
+## Table of contents
+
+- [Roadmap](#roadmap)
+- [Tech Stack](#techstack)
+- [Installation](#installation)
+
+## Roadmap
 
 - [x] Primitive user system.
 - [x] Posts with text content.
@@ -12,12 +18,30 @@
 - [ ] Tags.
 - [ ] Polls.
 - [ ] Videos.
-- [ ] Location -based mapping of content.
+- [x] Location -based mapping of content.
 - [ ] Cutomized feed based on channels that you're subscribed to.
-- [ ] Comment system
+- [x] Comment system
 
-## The STACK
+## Techstack
 
-### React.JS
-### Express.JS
-### Redux Toolkit
+- React.js
+- Epxress.js
+- Redux Toolkit
+
+## Usage
+
+1. Clone the repo
+
+git clone https://github.com/aeskerminen/Overheard.git
+
+2. Go to the root of the repo
+
+3. Run the 'generate_certs' script
+
+./generate_certs.sh
+
+4. Change the premade project.env file (optional)
+
+5. Run docker in the root directory
+
+sudo docker compose up --build
