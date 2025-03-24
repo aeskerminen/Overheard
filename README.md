@@ -43,6 +43,7 @@
 ### General
 
 - Nginx
+- Docker
 
 ## Usage
 
