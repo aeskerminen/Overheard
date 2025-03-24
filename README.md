@@ -1,6 +1,5 @@
 # Overheard
-
-## Overheard is a copy of the notorious hyperlocal social media app Jodel.
+Overheard is a copy of the notorious hyperlocal social media app Jodel.
 
 ## Table of contents
 
